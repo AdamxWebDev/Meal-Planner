@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tasty from '../Util/util';
+import '../Search/Search.css'
 
 const Search = (props) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -23,14 +24,17 @@ const Search = (props) => {
     }
 
     return (
-        <div>
+        <div className='searchBar'>
           <form>
             <input type='text' value={searchTerm} onChange={onChange} placeholder='Ingredient or Recipe' name='term' />
             <br></br>
             <input type='text' value={searchTag} onChange={onChange} placeholder='Tags' name='tag' />
           </form>
-          <button onClick={search}>Search</button>
-          <button onClick={log}>Log</button>
+          <span className='buttonWrap'>
+                <button onClick={search}>Search</button>
+                <button onClick={log}>Log</button>
+          </span>
+          
         </div>
       );
 }

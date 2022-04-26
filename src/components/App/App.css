@@ -2,3 +2,8 @@ button {
   width: 100px;
   height: 25px;
 }
+
+.resultsContainer {
+  display: flex;
+  flex-direction: row;
+}

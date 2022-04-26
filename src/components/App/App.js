@@ -5,7 +5,7 @@ import Results from '../Results/Results';
 
 const App = () => {
 
-  const [searchResults, setSearchResults] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   const setSearch = (results) => {
     setSearchResults(results)
@@ -14,8 +14,11 @@ const App = () => {
 
   return (
     <div>
+      <h1 style={{textAlign: 'center'}}>
+        Meal Planner
+      </h1>
       <Search setSearch={setSearch} searchResults={searchResults}/>
-      <Results searchResults={searchResults}/>
+      <Results searchResults={searchResults}/>      
     </div>
   );
 }

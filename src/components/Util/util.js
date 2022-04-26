@@ -11,7 +11,7 @@ const options = {
 const Tasty = {
 
     search(tag, term) {
-        return fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tag=${tag}&q=${term}`, options)
+        return fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=50&tag=${tag}&q=${term}`, options)
 	    .then(response => response.json())
 	    .then(jsonResponse => {
             return jsonResponse.results.map(result => ({

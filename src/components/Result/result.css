@@ -1,0 +1,24 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.Result {
+    margin-bottom: 25px;
+}
+
+video {
+    width: 50%;
+    height: 50%;
+}
+
+.imageContainer {
+    width: 250px;
+    height: auto;
+}
+
+.resultButton {
+    width: 250px;
+    margin-bottom: 5px;
+    height: 40px;
+}
