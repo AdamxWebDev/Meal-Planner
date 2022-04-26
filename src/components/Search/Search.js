@@ -20,7 +20,15 @@ const Search = (props) => {
     };
 
     async function log() {
-        console.log(props.searchResults.map(result => result.name))
+        console.log(props.searchResults)
+    }
+
+    const hide = () => {
+      if (props.hiddenState === 'contents') {
+        props.setHiddenState('none')
+      } else {
+        props.setHiddenState('contents')
+      }
     }
 
     return (
@@ -33,6 +41,7 @@ const Search = (props) => {
           <span className='buttonWrap'>
                 <button onClick={search}>Search</button>
                 <button onClick={log}>Log</button>
+                <button onClick={hide}>Hide/Show</button>
           </span>
           
         </div>
